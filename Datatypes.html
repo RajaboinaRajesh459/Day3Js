@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: lightblue;
+        }
+        ol li{
+            list-style: none;
+            color: darkgreen;
+        }
+        h1{
+            color: darkgoldenrod;
+        }
+        h4{
+            color: coral;
+        }
+        p{
+            color: blue;
+        }
+        h5{
+            color: red;
+        }
+        ul li{
+            list-style: none;
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Types</h1>
+    <p>In programming, data types is an important concept.To be able to operate on variables, it is important to know something about the type.Without data types, a computer cannot safely solve this:</p>
+    <p>There are two types of Data Types..</p>
+    <h4>1.Primitive Data Type.</h4>
+    <h4>1.Non Primitive Data Type.</h4>
+    <br>
+    <h4>1.Primitive Data Types</h4>
+    <p>The pre defined data types provided by javascript language are known as primitive data types.Below is a list of primitive Data types.</p>
+    <ol>
+        <li>Number </li>
+        <li>Boolean</li>
+        <li>BigInt</li>
+        <li>String</li>
+    </ol>
+    <br>
+    <h5>1.Number</h5>
+    <p>Number data type in javascript can be used to hold decimal values as well as values without decimals.</p>
+    <p style="color: brown;">Example: <br>
+        { <br>
+            var x=2452; <br>
+            var y=40.5; <br>
+            console.log(x); <br>
+            console.log(y);<br>
+        }              
+    </p>
+    <h5>2.Boolean</h5>
+    <p>Boolean data type in javascript can be accept two values i.e "True" and "False".</p>
+    <p style="color: brown;">Example: <br>
+        { <br>
+            var x=true; <br>
+            var y=false; <br>
+            console.log(x); <br>
+            console.log(y);<br>
+        }              
+    </p>
+    <h5>3.BigInt</h5>
+    <p>BigInt data type can represent number greater then 2 <sup>53</sup>-1 which helps to perform operation for larger numbers.The number is specifiad by writing 'n' at the end of the Value.</p>
+    <p style="color: brown;">Example: <br>
+        { <br>
+            var x=1234567890123456789n; <br>
+            console.log(x); <br>
+        }            
+    </p>
+    <h5>4.String</h5>
+    <p>String data type in javascript represents a sequence of characters that are surrounded by single(' ') or double quotes(" ") and or backticks(` `).</p>
+    <p style="color: brown;">Example: <br>
+        { <br>
+            var str="I am"; <br>
+            var str1='Rajesh'; <br>
+            var str2=`from eluru`; <br>
+            console.log(str); <br>
+            console.log(str1);<br>
+            console.log(str2);<br>
+        }              
+    </p>
+    <br>
+    <h4>2.Non Primitive Data Types</h>
+    <p>The Data types that are derived from primitive data types of the java script language are known as non primitive data types</p>
+    <ol>
+        <li>Undefined</li>
+        <li>Null</li>
+        <li>Object</li>
+        <li>Symbol</li>
+    </ol>
+    <br>
+    <h5>1.Undefined</h5>
+    <p>The meaning of undefined is value is not assaigned.</p>
+    <p style="color: brown;">Example: <br>
+        { <br>
+            var x; <br>
+            console.log(x); <br>
+        }              
+    </p>
+    <h5>2.Null</h5>
+    <p>This data type can hold only one possible value that is null.</p>
+    <p style="color: brown;">Example: <br>
+        { <br>
+            var x=null; <br>
+            console.log(x); <br>
+        }              
+    </p>
+    <h5>3.Symbol</h5>
+    <p>This data type is used to create objects which will always be unique.</p>
+    <h5>4.Object</h5>
+    <p>A object in javascript is an entity having properties and methods everything is an object.</p>
+    <p style="color: brown;">Example: <br>
+       var person {
+        firstName:"Rajesh";
+        lastName:"Rajaboina";
+       }
+       console.log(person.firstName);
+       console.log(person.lastName);            
+    </p>
+    <hr>
+    <h1>Call By Value</h1>
+    <p>In call by value method of parameter passing, the values of actual parameters are copied to the function’s formal parameters.</p>
+    <ul>
+        <li>There are two copies of parameters stored in different memory locations.</li>
+        <li>One is the original copy and the other is the function copy.</li>
+        <li>Any changes made inside functions are not reflected in the actual parameters of the caller.</li>
+    </ul>
+    <p style="color: brown;">Example: <br>
+        { <br>
+        // By value (primitives) <br>
+          var a = 5; <br>
+          var b; <br>
+          b = a; <br>
+          a = 3; <br>
+         console.log(a); <br>
+         console.log(b);  <br>
+        } <br>         
+     </p>
+     <h1>Call By Reference</h1>
+    <p> Let’s say, we have an object stored in the variable “a”. The variable stores the location or the address where the object lives. Now we set b=a. Now that new variable “b” instead of pointing to a new location in the memory, points to the same location where “a” does. No new object is created, and no copy is created. Both variables point to the same object. This is like having 2 names.
+
+        This is called by reference. It behaves quite differently from by value. All objects interact by reference.</p>
+    <p style="color: brown;">Example: <br>
+        { <br>
+            // By reference ( Non primitives) <br>
+            var c = 'Welcome';<br>
+            var d; <br>
+            d = c;<br>
+            console.log(c);
+            console.log(d);
+            } <br>        
+     </p>
+     <hr>
+     <h1>type of</h1>
+     <p>You can use the typeof operator to find the data type of a JavaScript variable.</p>
+     <p style="color: darkcyan;">
+        typeof "rajesh" //return string <br>
+        typeof 123      //return number <br>
+        typeof 12345678909876543n //return BigInt <br>
+        typeof true //return boolean <br>
+        typeof {name:"rajesh"} //return object <br>
+        typeof null //return null <br>
+        typeof demo //return undefined
+    </p>
+    <h1>Oparators in JavaScript</h1>
+    <p>JavaScript operators operate the operands, these are symbols that are used to manipulate a certain value or operand. Operators are used to performing specific mathematical and logical computations on operands. In JavaScript, operators are used to compare values, perform arithmetic operations, etc.</p>
+    <p>There are different types of operators</p>
+    <ul>
+        <li>Arthamatic Oparator
+            <ul>
+                <li>Addition(+)</li>
+                <li>Substraction(-)</li>
+                <li>Division(/)</li>
+                <li>Multiplication(*)</li>
+                <li>Modulus(%)</li>
+                <li>Exponentiation(**)</li>
+                <li>Increment(++)</li>
+                <li>Decrement(--)</li>
+            </ul>
+        </li>
+        <li>Assaignment Oparator(=)</li>
+    </ul>
+    
+</body>
+</html>
